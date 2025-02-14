@@ -53,8 +53,10 @@
               </ul>
             </li>
 
+            <?php
+            if (isset($_SESSION['admin'])) :
 
-            <li class="nav-item dropdown">
+              echo '<li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Backoffice</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="<?= BASE_URL; ?>admin/categories.php">Catégories</a></li>
@@ -62,6 +64,28 @@
                 <li><a class="dropdown-item" href="<?= BASE_URL; ?>admin/addJewelryForm.php">Gestions des Bijoux</a></li>
                 <li><a class="dropdown-item" href="<?= BASE_URL; ?>admin/users.php">Utilisateurs</a></li>
               </ul>
+            </li>';
+            endif;
+            ?>
+
+            <?php
+            if (!isset($_SESSION['user'])) :
+              echo "<li class='nav-item'>
+              <a class='nav-link' href=''>Connexion</a>
+            </li>";
+            endif;
+            ?>
+
+            <?php
+            if (isset($_SESSION['user'])) :
+              echo "<li class='nav-item'>
+                <a class='nav-link' href='?action=logout'>Déconnexion</a>
+              </li>";
+            endif;
+            ?>
+
+            <li class="nav-item">
+              <a class="nav-link" href="<?= BASE_URL; ?>store/cart.php"><i class="bi bi-basket"><sup></sup></i></a>
             </li>
 
           </ul>

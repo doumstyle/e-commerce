@@ -10,88 +10,56 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style.css">
+  <link rel="stylesheet" href="<?= BASE_URL ?>assets/css/styles.css">
   <title>E-commerce</title>
 </head>
 
 <body>
+  <div class="menu-icon">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-6 h-6">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 9h16.5m-16.5 6.75h16.5" />
+    </svg>
+  </div>
+
+  <div class="menu-items-container">
+    <div class="close-icon">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12" />
+      </svg>
+    </div>
+
+    <div class="menu-items">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </div>
+
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="<?= BASE_URL ?>index.php">Logo WIP</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="<?= BASE_URL ?>index.php">Accueil</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Bagues</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-disabled="true">Colliers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-disabled="true">Piercings</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-disabled="true">Montres</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Bracelets
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Poignets</a></li>
-                <li><a class="dropdown-item" href="#">Chevilles</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">Joncs</a></li>
-              </ul>
-            </li>
-
-            <?php
-            if (isset($_SESSION['admin'])) :
-
-              echo '<li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Backoffice</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="<?= BASE_URL; ?>admin/categories.php">Catégories</a></li>
-                <li><a class="dropdown-item" href="<?= BASE_URL; ?>admin/jewelry.php">Bijoux</a></li>
-                <li><a class="dropdown-item" href="<?= BASE_URL; ?>admin/addJewelryForm.php">Gestions des Bijoux</a></li>
-                <li><a class="dropdown-item" href="<?= BASE_URL; ?>admin/users.php">Utilisateurs</a></li>
-              </ul>
-            </li>';
-            endif;
-            ?>
-
-            <?php
-            if (!isset($_SESSION['user'])) :
-              echo "<li class='nav-item'>
-              <a class='nav-link' href=''>Connexion</a>
-            </li>";
-            endif;
-            ?>
-
-            <?php
-            if (isset($_SESSION['user'])) :
-              echo "<li class='nav-item'>
-                <a class='nav-link' href='?action=logout'>Déconnexion</a>
-              </li>";
-            endif;
-            ?>
-
-            <li class="nav-item">
-              <a class="nav-link" href="<?= BASE_URL; ?>store/cart.php"><i class="bi bi-basket"><sup></sup></i></a>
-            </li>
-
-          </ul>
-
-        </div>
-      </div>
-    </nav>
+    <video src="<?= BASE_URL ?>assets/videos/a-ring-with-a-blue-stone-in-gold.mp4" autoplay muted loop></video>
+    <div class="text-content">
+      <h1>Step into a World of Possibilities</h1>
+      <a href="#" class="btn">Learn More</a>
+    </div>
   </header>
+
   <main>
